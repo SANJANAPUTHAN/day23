@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Employee Registration HTML</title>
+	<!--<script>
+		function displayrating(slider)
+		{
+			document.getElementById("ratingvalue").innerHTML=slider.value;
+		}
+	</script>-->
+	<style type="text/css">
+		:required, :invalid {background-color:pink;}
+		:valid {background-color:white;}
+	</style>
+	
+</head>
+<body>
+	<h1>EmployeeRegistration</h1>
+	<form action="thankyou.html">
+	<label for="fullname">Fullname</label><br>
+	<input type="text" name="fullname" id="fullname" placeholder="Enter your full name" autofocus required /><br>
+	<label for="email">Email</label><br>
+	<input type="email" name="email" id="email" placeholder="Enter your mail id" autofocus required /><br>
+	<label for="dateOfBirth">DateOfBirth</label>
+	<input type="date" name="DateOfBirth" id="dateOfBirth" placeholder="Enter your date of birth" autofocus required /><br>
+	<label for="age">Age</label>
+	<input type="number" name="age" id="age" size="6" min="18" max="30" step="1" value="21" /><br>
+	<label for="rating">Rating</label>
+	
+	<!--<input type="range" name="rating" id="rating" min="1" max="100" step="1" value="1" onchange="displayrating(this);">-->
+	<input type="range" name="rating" id="rating" min="1" max="100" step="1" value="1" oninput="output.value=rating.value"
+	<span id="ratingvalue">0</span></br><output name=output>0</output><br/> 
+	<label for="phonenumber">Phonenumber</label>
+	<input type="text" name="phonenumber" id="phonenumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="XXX-XXX-XXXX" required/> <br>
+	<input type="submit" value="register">
+	<p>*</p>
+	</form>
+</body>
+</html>
